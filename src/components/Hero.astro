@@ -1,0 +1,59 @@
+---
+import { content } from '../lib/content';
+
+const { hero } = content;
+---
+
+<section id="top" class="hero">
+  <canvas class="hero-field" data-hero-field aria-hidden="true"></canvas>
+  <div class="hero-glow emerald" aria-hidden="true"></div>
+  <div class="hero-glow azure" aria-hidden="true"></div>
+
+  <div class="wrap grid items-center gap-14 lg:grid-cols-[1.12fr_0.88fr]">
+    <div>
+      <span class="status-pill status-live">{hero.status}</span>
+      <p class="kicker mt-7">{hero.kicker}</p>
+      <h1 class="hero-h1">
+        {hero.headline.lead}
+        <span class="em">{hero.headline.emphasis}</span>
+        {hero.headline.trail}
+      </h1>
+      <p class="lede">{hero.subhead}</p>
+
+      <div class="mt-9 flex flex-wrap gap-3.5">
+        {hero.ctas.map((cta) => (
+          <a class={`btn ${cta.kind === 'primary' ? 'btn-primary' : 'btn-ghost'}`} href={cta.href}>
+            {cta.label}
+          </a>
+        ))}
+      </div>
+
+      <p class="mt-7 font-mono text-xs text-ink-faint">⌖ {hero.location}</p>
+    </div>
+
+    <div data-reveal>
+      <div class="term">
+        <div class="term-bar">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="term-title">{hero.terminal.title}</span>
+        </div>
+        <div class="term-body" data-terminal aria-hidden="true">
+          {hero.terminal.lines.map((line) => (
+            <div class="term-line" data-term-row>
+              <p><span class="prompt">$</span><span class="cmd">{line.cmd}</span></p>
+              <p class="term-out">{line.out}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <!-- static transcript for screen readers; the animated terminal above is aria-hidden -->
+      <div class="sr-only">
+        {hero.terminal.lines.map((line) => (
+          <p>{`Command: ${line.cmd}. Output: ${line.out}`}</p>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
