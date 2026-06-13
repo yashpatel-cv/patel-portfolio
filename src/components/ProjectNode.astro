@@ -1,0 +1,78 @@
+---
+/**
+ * ProjectNode — one deep-dive case study rendered as a node on the
+ * orchestration canvas: header, problem/approach, data-driven pipeline
+ * diagram, highlights, metrics, stack. The Yantresh node additionally
+ * mounts the full architecture blueprint.
+ */
+import FlowDiagram from './FlowDiagram.astro';
+import YantreshArchitecture from './YantreshArchitecture.astro';
+import type { Project } from '../lib/content';
+
+interface Props {
+  project: Project;
+  index: number;
+}
+
+const { project, index } = Astro.props;
+const ordinal = String(index + 1).padStart(2, '0');
+---
+
+<article id={`project-${project.id}`} class="node-card scroll-mt-24" data-reveal>
+  <header class="flex flex-wrap items-start justify-between gap-4">
+    <div>
+      <p class="codename">
+        {project.codename}
+        <span class="ml-2 text-ink-faint">/ {ordinal}</span>
+      </p>
+      <h3 class="mt-2.5 text-2xl font-bold tracking-tight md:text-3xl">{project.name}</h3>
+      <p class="mt-2.5 font-mono text-xs text-ink-faint">{project.role} · {project.period}</p>
+    </div>
+    <span class={`status-pill status-${project.status.kind}`}>{project.status.label}</span>
+  </header>
+
+  <p class="mt-7 max-w-none text-base leading-relaxed text-ink-dim md:text-lg">{project.summary}</p>
+
+  <div class="mt-9 grid gap-7 md:grid-cols-2">
+    <div>
+      <h4 class="font-mono text-[0.68rem] font-semibold tracking-[0.26em] text-amber">▣ THE PROBLEM</h4>
+      <p class="mt-3 text-sm leading-relaxed text-ink-dim">{project.problem}</p>
+    </div>
+    <div>
+      <h4 class="font-mono text-[0.68rem] font-semibold tracking-[0.26em] text-emerald">▣ THE APPROACH</h4>
+      <p class="mt-3 text-sm leading-relaxed text-ink-dim">{project.approach}</p>
+    </div>
+  </div>
+
+  <div class="mt-12">
+    <FlowDiagram diagram={project.diagram} name={`${project.id}-pipeline`} />
+  </div>
+
+  {project.architecture && (
+    <YantreshArchitecture architecture={project.architecture} projectId={project.id} />
+  )}
+
+  <div class="mt-12 grid gap-4 sm:grid-cols-2">
+    {project.highlights.map((highlight) => (
+      <div class="highlight-card">
+        <h4>{highlight.title}</h4>
+        <p>{highlight.body}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
+    {project.metrics.map((metric) => (
+      <div class="metric">
+        <p class="value">{metric.value}</p>
+        <p class="label">{metric.label}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="mt-10 flex flex-wrap gap-2" aria-label={`${project.name} technology stack`}>
+    {project.stack.map((tech) => (
+      <span class="chip">{tech}</span>
+    ))}
+  </div>
+</article>
