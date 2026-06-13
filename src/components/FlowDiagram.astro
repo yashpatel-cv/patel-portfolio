@@ -1,0 +1,51 @@
+---
+/**
+ * FlowDiagram — a fully data-driven orchestration canvas.
+ *
+ * Nodes are positioned on a CSS grid from `col`/`row` in content.json;
+ * edges are serialized into `data-edges` and rendered as SVG threads by
+ * threads.ts at runtime (drawn-in on scroll, perpetual data-flow dashes).
+ * On narrow viewports the grid collapses to a vertical flow and the
+ * threads re-route automatically — the engine measures real DOM geometry.
+ */
+import type { Diagram } from '../lib/content';
+
+interface Props {
+  diagram: Diagram;
+  name: string;
+}
+
+const { diagram, name } = Astro.props;
+
+/**
+ * Screen-reader narration: SVG threads are purely visual, so the edge
+ * topology is described as prose. "A flows to B; gate rejects back to C…"
+ */
+const titleOf = new Map(diagram.nodes.map((node) => [node.id, node.title]));
+const narration = diagram.edges
+  .map((edge) => {
+    const verb = edge.kind === 'reject' ? 'rejects back to' : 'flows to';
+    const label = edge.label ? ` (${edge.label})` : '';
+    return `${titleOf.get(edge.from)} ${verb} ${titleOf.get(edge.to)}${label}`;
+  })
+  .join('; ');
+---
+
+<figure class="flow" data-canvas={name} data-edges={JSON.stringify(diagram.edges)}>
+  <svg class="flow-threads" aria-hidden="true"></svg>
+  <div class="flow-grid" style={`--cols:${diagram.cols}`}>
+    {diagram.nodes.map((node) => (
+      <div
+        class={`flow-node kind-${node.kind ?? 'compute'}`}
+        data-node={node.id}
+        style={`--col:${node.col};--row:${node.row}`}
+      >
+        <span class="flow-kind">{(node.kind ?? 'node').toUpperCase()}</span>
+        <span class="flow-title">{node.title}</span>
+        {node.sub && <span class="flow-sub">{node.sub}</span>}
+      </div>
+    ))}
+  </div>
+  <p class="sr-only">Flow connections: {narration}.</p>
+  {diagram.caption && <figcaption class="flow-caption">{diagram.caption}</figcaption>}
+</figure>
