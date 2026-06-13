@@ -1,0 +1,84 @@
+---
+/**
+ * ThreadFinder — ⌘K command palette. Entries are derived entirely from
+ * content.json at build time (sections, case studies, linked skills,
+ * contact actions) and serialized as JSON for the palette runtime.
+ * Uses native <dialog> for free focus-trap + ESC semantics; combobox
+ * ARIA pattern (aria-activedescendant) for screen readers.
+ */
+import { content } from '../lib/content';
+
+interface PaletteEntry {
+  label: string;
+  hint: string;
+  href?: string;
+  action?: 'copy-email';
+  keys: string;
+}
+
+const entries: PaletteEntry[] = [
+  ...content.nav.links.map((link) => ({
+    label: `Go to ${link.label}`,
+    hint: 'section',
+    href: link.href,
+    keys: `section nav ${link.label}`,
+  })),
+  ...content.projects.items.map((project) => ({
+    label: `${project.codename} — ${project.name}`,
+    hint: project.status.label.toLowerCase(),
+    href: `#project-${project.id}`,
+    keys: `project case study ${project.id} ${project.stack.join(' ')}`,
+  })),
+  ...content.skills.clusters.flatMap((cluster) =>
+    cluster.items
+      .filter((item) => item.links && item.links.length > 0)
+      .map((item) => ({
+        label: `${item.name}`,
+        hint: `skill → ${item.links!.join(', ')}`,
+        href: `#project-${item.links![0]}`,
+        keys: `skill thread ${cluster.title} ${item.links!.join(' ')}`,
+      })),
+  ),
+  {
+    label: `Copy email — ${content.contact.email}`,
+    hint: 'action',
+    action: 'copy-email' as const,
+    keys: 'copy email contact clipboard',
+  },
+  {
+    label: 'Open email client',
+    hint: 'action',
+    href: `mailto:${content.contact.email}`,
+    keys: 'email mailto hire contact',
+  },
+];
+---
+
+<dialog class="tf" data-palette aria-label="Quick navigation — Thread Finder">
+  <div class="tf-box">
+    <div class="tf-head">
+      <span class="tf-glyph" aria-hidden="true">⟡</span>
+      <input
+        class="tf-input"
+        type="text"
+        role="combobox"
+        aria-expanded="true"
+        aria-controls="tf-list"
+        aria-autocomplete="list"
+        aria-label="Search sections, projects, and skills"
+        placeholder="Pull a thread… sections · projects · skills"
+        autocomplete="off"
+        spellcheck="false"
+        maxlength="64"
+      />
+      <kbd class="tf-kbd">esc</kbd>
+    </div>
+    <ul class="tf-list" id="tf-list" role="listbox" aria-label="Results"></ul>
+    <div class="tf-foot" aria-hidden="true">
+      <span>↑↓ navigate</span>
+      <span>↵ open</span>
+      <span>⌘K / ctrl+K toggle</span>
+    </div>
+  </div>
+</dialog>
+<script is:inline type="application/json" data-palette-data set:html={JSON.stringify(entries)} />
