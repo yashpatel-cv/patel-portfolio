@@ -1,0 +1,13 @@
+node_modules
+dist
+.astro
+.git
+.gitignore
+*.log
+.env
+.env.*
+README.md
+Yantresh-BUILD-PLAN.md
+autoApply-BUILD-PROMPT.md
+docker-compose.yml
+Dockerfile
