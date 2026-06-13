@@ -1,0 +1,71 @@
+---
+/**
+ * ExperienceThread — career timeline rendered as a literal thread:
+ * a gradient spine with nodes that light up as they enter the viewport.
+ */
+import { content } from '../lib/content';
+
+const { experience } = content;
+---
+
+<section id={experience.id} class="section">
+  <div class="wrap">
+    <div data-reveal>
+      <p class="kicker">{experience.kicker}</p>
+      <h2 class="h2">{experience.heading}</h2>
+    </div>
+
+    <div class="mt-16 grid gap-16 lg:grid-cols-[1.65fr_1fr]">
+      <div class="xp-thread">
+        {experience.items.map((xp) => (
+          <article class="xp-item" data-reveal>
+            <h3 class="xp-role">
+              {xp.role} <span class="xp-company">@ {xp.company}</span>
+            </h3>
+            <p class="xp-meta">{xp.period} · {xp.location}</p>
+            <ul class="xp-bullets">
+              {xp.bullets.map((bullet) => (
+                <li>{bullet}</li>
+              ))}
+            </ul>
+            {xp.projectId && (
+              <a class="xp-link" href={`#project-${xp.projectId}`}>
+                ⟶ trace this thread in the case study
+              </a>
+            )}
+          </article>
+        ))}
+      </div>
+
+      <aside class="space-y-5 lg:sticky lg:top-24 lg:self-start">
+        <div class="cluster-card">
+          <h3 class="cluster-title">Education</h3>
+          <div class="grid gap-4">
+            {experience.education.map((edu) => (
+              <div>
+                <p class="text-sm font-semibold">{edu.credential}</p>
+                <p class="mt-1 font-mono text-[0.68rem] leading-relaxed text-ink-faint">
+                  {edu.school} · {edu.period}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="cluster-card">
+          <h3 class="cluster-title">Certifications</h3>
+          <div class="grid gap-4">
+            {experience.certifications.map((cert) => (
+              <div>
+                <p class="text-sm font-semibold text-emerald">✓ {cert.name}</p>
+                <p class="mt-1 font-mono text-[0.68rem] text-ink-faint">
+                  {cert.issuer}{cert.note ? ` — ${cert.note}` : ''}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
