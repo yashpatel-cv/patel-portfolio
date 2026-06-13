@@ -1,0 +1,79 @@
+---
+/**
+ * YantreshArchitecture — the flagship deep-dive: Five Bounds doctrine,
+ * guard stack, and the model-agnostic ModelRouter fan-out.
+ */
+import FlowDiagram from './FlowDiagram.astro';
+import type { YantreshArchitecture } from '../lib/content';
+
+interface Props {
+  architecture: YantreshArchitecture;
+  projectId: string;
+}
+
+const { architecture, projectId } = Astro.props;
+const { doctrine, router } = architecture;
+---
+
+<div class="mt-16 grid gap-16">
+  <section aria-label={doctrine.heading}>
+    <p class="kicker">{doctrine.kicker}</p>
+    <h4 class="mt-2 text-xl font-bold tracking-tight md:text-2xl">{doctrine.heading}</h4>
+    <p class="mt-3 max-w-3xl text-sm leading-relaxed text-ink-dim">{doctrine.intro}</p>
+
+    <div class="mt-7 grid gap-3">
+      {doctrine.bounds.map((bound, index) => (
+        <div class="bound-row" data-reveal style={`--reveal-delay:${index * 80}ms`}>
+          <span class="bound-n">{bound.n}</span>
+          <p class="bound-name">
+            {bound.name}
+            <span class="limit">{bound.limit}</span>
+          </p>
+          <p class="bound-breach">{bound.breach}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-7 grid gap-4 md:grid-cols-3">
+      {doctrine.guards.map((guard) => (
+        <div class="highlight-card">
+          <h4>{guard.name}</h4>
+          <p>{guard.body}</p>
+        </div>
+      ))}
+    </div>
+
+    <p class="guarantee mt-7" data-reveal>{doctrine.guarantee}</p>
+  </section>
+
+  <section aria-label={router.heading}>
+    <p class="kicker">{router.kicker}</p>
+    <h4 class="mt-2 text-xl font-bold tracking-tight md:text-2xl">{router.heading}</h4>
+    <p class="mt-3 max-w-3xl text-sm leading-relaxed text-ink-dim">{router.intro}</p>
+
+    <div class="mt-9">
+      <FlowDiagram diagram={router.diagram} name={`${projectId}-router`} />
+    </div>
+
+    <div class="mt-9 overflow-x-auto">
+      <table class="route-table">
+        <thead>
+          <tr>
+            <th scope="col">STEP TYPE</th>
+            <th scope="col">MODEL CLASS</th>
+            <th scope="col">WHY</th>
+          </tr>
+        </thead>
+        <tbody>
+          {router.routes.map((route) => (
+            <tr>
+              <td>{route.step}</td>
+              <td>{route.model}</td>
+              <td>{route.why}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
