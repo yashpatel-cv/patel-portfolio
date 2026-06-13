@@ -1,0 +1,40 @@
+---
+import { content } from '../lib/content';
+
+const { nav, brand } = content;
+---
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="nav-brand" aria-label={`${brand.wordmark} — back to top`}>
+      <span class="mark">⟡ {brand.wordmark}</span>
+      <span class="tag">{brand.tagline}</span>
+    </a>
+
+    <nav class="nav-links" aria-label={nav.ariaLabel}>
+      {nav.links.map((link) => (
+        <a class="nav-link" href={link.href}>{link.label}</a>
+      ))}
+      <button type="button" class="nav-link palette-btn" data-palette-open aria-label="Open Thread Finder quick navigation">
+        find <kbd>⌘K</kbd>
+      </button>
+      <a class="btn btn-primary !px-4 !py-2 !text-[0.74rem]" href={nav.cta.href}>{nav.cta.label}</a>
+    </nav>
+
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div class="wrap nav-mobile">
+    {nav.links.map((link) => (
+      <a href={link.href}>{link.label}</a>
+    ))}
+    <button type="button" class="palette-btn self-start py-2 font-mono text-sm text-ink-dim" data-palette-open>
+      find anything <kbd>⌘K</kbd>
+    </button>
+    <a href={nav.cta.href} class="!text-emerald">{nav.cta.label} →</a>
+  </div>
+</header>
