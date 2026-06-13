@@ -1,4 +1,6 @@
-# Yantresh portfolio — Oracle ARM (Ampere A1) deployment.
+# Local/standalone preview only — builds and runs this image directly on
+# :8080 with no TLS. Production deploy (Caddy + TLS + GHCR image pull) is
+# wired in the yantresh-hub repo, which does not use this file.
 #   docker compose up -d --build   →  http://<host>:8080
 services:
   portfolio:
