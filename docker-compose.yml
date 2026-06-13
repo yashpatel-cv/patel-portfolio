@@ -1,0 +1,39 @@
+# Yantresh portfolio — Oracle ARM (Ampere A1) deployment.
+#   docker compose up -d --build   →  http://<host>:8080
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: yash-patel-portfolio:latest
+    # Explicit for Oracle Ampere A1; harmless on any arm64 host.
+    # (Remove or override with linux/amd64 for local x86 testing.)
+    platform: linux/arm64
+    container_name: yash-portfolio
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      # unprivileged nginx keeps pid + cache under /tmp
+      - /tmp:size=16m,mode=1777
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:8080/healthz"]
+      interval: 30s
+      timeout: 4s
+      start_period: 5s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 128M
+    logging:
+      driver: json-file
+      options:
+        max-size: "5m"
+        max-file: "2"
