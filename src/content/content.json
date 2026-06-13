@@ -1,0 +1,436 @@
+{
+  "meta": {
+    "title": "Yash Patel — Full-Stack Developer · AI Orchestration & Automation",
+    "description": "Full-Stack Developer and n8n Certified Professional. I architect distributed data engines, autonomous AI operations pipelines, and bounded multi-agent systems. 1M+ products tracked, 300+ stores scraped, sub-100ms search at scale.",
+    "themeColor": "#0a0e14",
+    "language": "en",
+    "author": "Yash Patel",
+    "keywords": ["Full-Stack Developer", "AI Orchestration", "n8n Certified Professional", "Automation Engineer", "Distributed Systems", "LLM Pipelines", "TypeScript", "Python"]
+  },
+  "brand": {
+    "mark": "YP",
+    "wordmark": "yash.patel",
+    "tagline": "yantresh — the holder of threads"
+  },
+  "nav": {
+    "ariaLabel": "Primary navigation",
+    "links": [
+      { "label": "Threads", "href": "#threads" },
+      { "label": "Case Studies", "href": "#projects" },
+      { "label": "Yantresh", "href": "#project-yantresh" },
+      { "label": "Experience", "href": "#experience" },
+      { "label": "Contact", "href": "#contact" }
+    ],
+    "cta": { "label": "Start a thread", "href": "#contact" }
+  },
+  "hero": {
+    "status": "Available for AI infrastructure & automation engineering",
+    "kicker": "FULL-STACK DEVELOPER · n8n CERTIFIED PROFESSIONAL",
+    "headline": {
+      "lead": "I hold the",
+      "emphasis": "threads",
+      "trail": "between systems."
+    },
+    "subhead": "Orchestration is my craft: distributed scrapers feeding ML matchers, LLM pipelines guarded by strict schemas, and agent loops that are mathematically incapable of hanging. I design the canvas, wire the nodes, and ship the flow to production.",
+    "location": "Kitchener, ON, Canada · Remote-first",
+    "ctas": [
+      { "label": "Inspect the case studies", "href": "#projects", "kind": "primary" },
+      { "label": "yash.patel.exclusive@gmail.com", "href": "mailto:yash.patel.exclusive@gmail.com", "kind": "ghost" }
+    ],
+    "terminal": {
+      "title": "amatya@yantresh:~",
+      "lines": [
+        { "cmd": "whoami", "out": "yash.patel — full-stack dev · ai orchestration · data at scale" },
+        { "cmd": "n8n certs --verify", "out": "✓ n8n Certified Professional" },
+        { "cmd": "uptime --career", "out": "4+ yrs · 1M+ products tracked · 300+ stores · 30K+ app installs" },
+        { "cmd": "./yantresh --status", "out": "ACTIVE DEV → AI Workforce OS · Phase 0: prove the loop" }
+      ]
+    }
+  },
+  "metrics": {
+    "ariaLabel": "Career metrics",
+    "items": [
+      { "value": "1M+", "label": "products tracked", "detail": "at peak, across the comparison engine" },
+      { "value": "300+", "label": "stores scraped", "detail": "distributed crawl fleet on Azure" },
+      { "value": "<100ms", "label": "search response", "detail": "on 5,000+ daily indexed records" },
+      { "value": "30K+", "label": "app downloads", "detail": "Flutter iOS/Android · 4.3★ rating" },
+      { "value": "4+", "label": "years shipping", "detail": "full lifecycle: scope → deploy → scale" },
+      { "value": "100%", "label": "schema-gated LLM I/O", "detail": "strict JSON Schema validation on every output" }
+    ]
+  },
+  "skills": {
+    "id": "threads",
+    "kicker": "THE THREADS",
+    "heading": "A constellation wired for orchestration",
+    "intro": "Every cluster below is a live input to the case studies. Hover a thread to see where it lands in production.",
+    "core": {
+      "id": "core",
+      "title": "The Orchestrator",
+      "sub": "design the canvas · wire the nodes · bound the loop"
+    },
+    "clusters": [
+      {
+        "id": "languages",
+        "title": "Languages & Core",
+        "position": { "col": 1, "row": 1 },
+        "items": [
+          { "name": "TypeScript", "links": ["synapse"] },
+          { "name": "JavaScript" },
+          { "name": "Python", "links": ["nexus", "yantresh"] },
+          { "name": "Go" },
+          { "name": "SQL", "links": ["nexus"] },
+          { "name": "Bash/Zsh" },
+          { "name": "Dart", "links": ["nexus"] }
+        ]
+      },
+      {
+        "id": "frontend",
+        "title": "Frontend Systems",
+        "position": { "col": 2, "row": 1 },
+        "items": [
+          { "name": "React.js" },
+          { "name": "Next.js" },
+          { "name": "Angular" },
+          { "name": "Flutter", "links": ["nexus"] },
+          { "name": "HTML5 / CSS3" },
+          { "name": "Responsive Design" }
+        ]
+      },
+      {
+        "id": "backend",
+        "title": "Backend & APIs",
+        "position": { "col": 3, "row": 1 },
+        "items": [
+          { "name": "Node.js", "links": ["nexus"] },
+          { "name": "FastAPI", "links": ["yantresh"] },
+          { "name": "Express.js" },
+          { "name": "Flask / Django" },
+          { "name": "GraphQL" },
+          { "name": "OAuth 2.0 / JWT" },
+          { "name": "Microservices" },
+          { "name": "Stripe Integration", "links": ["synapse"] }
+        ]
+      },
+      {
+        "id": "cloud",
+        "title": "Cloud & DevOps",
+        "position": { "col": 1, "row": 3 },
+        "items": [
+          { "name": "Azure Service Bus", "links": ["nexus"] },
+          { "name": "Azure Functions", "links": ["nexus"] },
+          { "name": "AWS (Lambda · EC2 · S3 · RDS)" },
+          { "name": "Docker", "links": ["yantresh"] },
+          { "name": "Kubernetes" },
+          { "name": "GitHub Actions CI/CD", "links": ["nexus"] }
+        ]
+      },
+      {
+        "id": "data",
+        "title": "Data Layer",
+        "position": { "col": 2, "row": 3 },
+        "items": [
+          { "name": "PostgreSQL", "links": ["yantresh"] },
+          { "name": "Redis", "links": ["yantresh"] },
+          { "name": "MongoDB" },
+          { "name": "Elasticsearch", "links": ["nexus"] },
+          { "name": "DynamoDB" },
+          { "name": "Apache Kafka" },
+          { "name": "ETL Pipeline Design", "links": ["nexus", "synapse"] }
+        ]
+      },
+      {
+        "id": "ai",
+        "title": "AI & Automation",
+        "position": { "col": 3, "row": 3 },
+        "items": [
+          { "name": "n8n (Certified)", "links": ["synapse"] },
+          { "name": "Anthropic Claude API", "links": ["synapse", "yantresh"] },
+          { "name": "OpenAI API", "links": ["synapse", "yantresh"] },
+          { "name": "LangChain" },
+          { "name": "JSON Schema Validation", "links": ["synapse"] },
+          { "name": "Prompt Engineering", "links": ["yantresh"] },
+          { "name": "Apify / Selenium / BeautifulSoup", "links": ["nexus"] },
+          { "name": "ML Model Training", "links": ["nexus"] }
+        ]
+      }
+    ],
+    "edges": [
+      { "from": "core", "to": "languages" },
+      { "from": "core", "to": "frontend" },
+      { "from": "core", "to": "backend" },
+      { "from": "core", "to": "cloud" },
+      { "from": "core", "to": "data" },
+      { "from": "core", "to": "ai" }
+    ]
+  },
+  "projects": {
+    "id": "projects",
+    "kicker": "CASE STUDIES",
+    "heading": "Three engines, one doctrine",
+    "intro": "Scale it, automate it, then bound it. Each node below is a production system — trace the threads from trigger to terminal state.",
+    "items": [
+      {
+        "id": "nexus",
+        "codename": "PROJECT NEXUS",
+        "name": "The Data Scale Engine",
+        "status": { "label": "SHIPPED · PRODUCTION", "kind": "live" },
+        "role": "Software Engineer · One Red Maple",
+        "period": "2021 — 2024",
+        "summary": "A distributed web scraping and matching infrastructure that tracked 1M+ products across 300+ e-commerce stores, powering a consumer price-comparison product on web, mobile, and browser extension.",
+        "problem": "Marketplace listings and local-store catalogs describe the same physical product with 90%+ string difference — long SEO-stuffed marketplace titles versus terse local names. Comparing prices at city scale meant continuously crawling hundreds of hostile, anti-bot-protected storefronts and resolving identity across catalogs with no shared keys.",
+        "approach": "Decompose the crawl into queue-fed, per-store workers behind rotating proxy pools; normalize and deduplicate everything into a single index; and resolve product identity with a purpose-trained ML model that fuses string features with image similarity. Every stage is independently scalable and independently restartable.",
+        "diagram": {
+          "cols": 3,
+          "caption": "Nexus pipeline — serpentine flow from scheduled fan-out to consumer surfaces.",
+          "nodes": [
+            { "id": "orchestrator", "title": "Crawl Orchestrator", "sub": "GitHub Actions · cron fan-out per store", "kind": "trigger", "col": 1, "row": 1 },
+            { "id": "bus", "title": "Azure Service Bus", "sub": "work queues · dead-letter lanes", "kind": "infra", "col": 2, "row": 1 },
+            { "id": "fleet", "title": "Scraper Fleet", "sub": "Node.js + Python · rotating proxies per platform", "kind": "compute", "col": 3, "row": 1 },
+            { "id": "etl", "title": "Normalize + Dedup", "sub": "ETL · 5,000+ records/day", "kind": "compute", "col": 3, "row": 2 },
+            { "id": "match", "title": "ML Match Engine", "sub": "product + image matching across 90%+ string drift", "kind": "ml", "col": 2, "row": 2 },
+            { "id": "index", "title": "Azure Search Index", "sub": "1M+ products · sub-100ms reads", "kind": "infra", "col": 1, "row": 2 },
+            { "id": "surfaces", "title": "Consumer Surfaces", "sub": "web app · Flutter iOS/Android · browser extension", "kind": "output", "col": 2, "row": 3 }
+          ],
+          "edges": [
+            { "from": "orchestrator", "to": "bus" },
+            { "from": "bus", "to": "fleet" },
+            { "from": "fleet", "to": "etl" },
+            { "from": "etl", "to": "match" },
+            { "from": "match", "to": "index" },
+            { "from": "index", "to": "surfaces" }
+          ]
+        },
+        "highlights": [
+          { "title": "Anti-bot resilience as infrastructure", "body": "Rotating proxy pools configured per e-commerce platform sustained large-scale collection without blocking — reliability was engineered into the transport layer, not patched per incident." },
+          { "title": "Identity across 90%+ string drift", "body": "Trained a product + image matching model that resolves identical items across wildly inconsistent naming, letting users find cheaper local alternatives to marketplace listings." },
+          { "title": "Sub-100ms at million-product scale", "body": "Normalization, deduplication, and Azure indexing of 5,000+ daily records kept search under 100ms while the catalog grew past 1M tracked products." },
+          { "title": "Funnel-driven product iteration", "body": "GA4 event tracking exposed a 23% onboarding drop-off; the redesign it motivated lifted conversions 11% on a 30K+ download, 4.3★ Flutter app." }
+        ],
+        "metrics": [
+          { "value": "1M+", "label": "products at peak" },
+          { "value": "300+", "label": "stores crawled" },
+          { "value": "5K+", "label": "records normalized daily" },
+          { "value": "<100ms", "label": "search response" }
+        ],
+        "stack": ["Node.js", "Python", "Azure Service Bus", "Azure Functions", "GitHub Actions", "Rotating Proxies", "ML Matching", "Flutter", "GA4"]
+      },
+      {
+        "id": "synapse",
+        "codename": "PROJECT SYNAPSE",
+        "name": "The Autonomous Operations Engine",
+        "status": { "label": "SHIPPED · LIVE CLIENTS", "kind": "live" },
+        "role": "Full-Stack Developer · Patel Solutions Corp.",
+        "period": "2024 — PRESENT",
+        "summary": "AI-powered operations automation for North American SMBs: n8n-orchestrated pipelines that fuse Stripe, supplier feeds, POS systems, and LLM reasoning — with every model output gated by strict JSON Schema validation before it can touch a database.",
+        "problem": "Small businesses run on manual glue: re-keying supplier feeds, dispatching orders by hand, reconciling payments against bookings. LLMs can automate the judgment steps, but raw model output is untrusted input — one malformed or hallucinated field can corrupt inventory, overcharge a customer, or break a POS sync.",
+        "approach": "Treat the LLM as just another untrusted node on the canvas. n8n owns orchestration — triggers, branching, retries, idempotent dispatch. Claude and OpenAI handle classification, extraction, and drafting. Nothing the model emits reaches a business system until it passes a strict JSON Schema gate; invalid payloads are bounced back for bounded re-prompting, then routed to error lanes with alerting.",
+        "diagram": {
+          "cols": 3,
+          "caption": "Synapse flow — the schema gate is the trust boundary; rejected payloads loop back, bounded.",
+          "nodes": [
+            { "id": "triggers", "title": "Event Triggers", "sub": "webhooks · cron · Stripe events · supplier feeds", "kind": "trigger", "col": 1, "row": 1 },
+            { "id": "n8n", "title": "n8n Orchestrator", "sub": "branching · retries · idempotent dispatch", "kind": "infra", "col": 2, "row": 1 },
+            { "id": "llm", "title": "LLM Reasoning", "sub": "Claude + OpenAI · classify · extract · draft", "kind": "ml", "col": 3, "row": 1 },
+            { "id": "gate", "title": "JSON Schema Gate", "sub": "strict validation · the trust boundary", "kind": "guard", "col": 3, "row": 2 },
+            { "id": "systems", "title": "Business Systems", "sub": "POS sync · inventory · booking · Stripe", "kind": "output", "col": 2, "row": 2 },
+            { "id": "audit", "title": "Audit & Alerting", "sub": "error lanes · run logs · human escalation", "kind": "guard", "col": 1, "row": 2 }
+          ],
+          "edges": [
+            { "from": "triggers", "to": "n8n" },
+            { "from": "n8n", "to": "llm" },
+            { "from": "llm", "to": "gate" },
+            { "from": "gate", "to": "llm", "label": "invalid → re-prompt", "kind": "reject" },
+            { "from": "gate", "to": "systems" },
+            { "from": "systems", "to": "audit" }
+          ]
+        },
+        "highlights": [
+          { "title": "Schema validation as a trust boundary", "body": "Strict JSON Schema validation on all LLM outputs protects downstream databases and applications — hallucinated fields die at the gate, never in production data." },
+          { "title": "Zero-touch daily operations", "body": "n8n and Make.com ETL pipelines sync real-time product data from supplier feeds and stream order dispatch into inventory systems, eliminating manual intervention from daily operations." },
+          { "title": "Payments wired end-to-end", "body": "Stripe processing, booking and reservation engines, and website-to-POS data synchronization integrated with graceful error handling to protect uptime and revenue." },
+          { "title": "Full lifecycle ownership", "body": "Scoping, architecture trade-offs, deployment, and post-launch evolution on live codebases — shipped MVPs on time and grew them as the client businesses scaled." }
+        ],
+        "metrics": [
+          { "value": "100%", "label": "LLM output schema-gated" },
+          { "value": "0", "label": "manual steps in daily ops" },
+          { "value": "E2E", "label": "scope → deploy → support" },
+          { "value": "24/7", "label": "autonomous pipelines live" }
+        ],
+        "stack": ["n8n", "Make.com", "Anthropic Claude", "OpenAI API", "JSON Schema", "Stripe", "TypeScript", "Node.js", "Python", "REST / GraphQL", "OAuth 2.0"]
+      },
+      {
+        "id": "yantresh",
+        "codename": "YANTRESH — AI WORKFORCE OS",
+        "name": "The Next-Gen Vision",
+        "status": { "label": "IN ACTIVE DEVELOPMENT", "kind": "dev" },
+        "role": "Architect & Builder · Independent R&D",
+        "period": "2026 — ",
+        "summary": "Yantresh (સૂત્રધાર — 'the holder of the threads') is a supervisor-over-worker agent platform built on one non-negotiable guarantee: no task can ever hang. One Amatya (supervisor) plans, bounds, and verifies; one Karta (worker) executes — model-agnostic by construction, costed per task, terminal by design.",
+        "problem": "Multi-agent systems burn ~15× the tokens of a single chat, fragment context across workers, and fail silently — a worker can simply declare success. The field's strongest skeptics and strongest advocates agree on the failure modes; almost nobody engineers for them up front.",
+        "approach": "Use the supervisor not to parallelize, but to bound and verify. Every run is capped on five independent axes that each resolve to exactly one terminal action, every model call flows through one router seam so vendors are config rows rather than code, and a worker can never self-certify — the verification gate belongs to the Amatya. Phase 0 gates the whole platform: 4 of 5 golden tasks must pass under a fixed token budget before any dashboard exists.",
+        "diagram": {
+          "cols": 3,
+          "caption": "The bounded loop — every path terminates in complete or escalated. 'Stuck' is unreachable.",
+          "nodes": [
+            { "id": "intake", "title": "Task Intake", "sub": "CLI · REST (FastAPI)", "kind": "trigger", "col": 1, "row": 1 },
+            { "id": "amatya", "title": "Amatya — Supervisor", "sub": "plans · reviews · owns the bounds", "kind": "ml", "col": 2, "row": 1 },
+            { "id": "karta", "title": "Karta — Worker", "sub": "executes · 3 tools · cheap fast model", "kind": "compute", "col": 3, "row": 1 },
+            { "id": "guards", "title": "Loop Guard + Breaker", "sub": "embedding fingerprints · circuit breaker per tool", "kind": "guard", "col": 3, "row": 2 },
+            { "id": "gate", "title": "Verification Gate", "sub": "definition-of-done · no self-certification", "kind": "guard", "col": 2, "row": 2 },
+            { "id": "terminal", "title": "Terminal States", "sub": "complete · escalated · failed — with checkpoint", "kind": "output", "col": 1, "row": 2 }
+          ],
+          "edges": [
+            { "from": "intake", "to": "amatya" },
+            { "from": "amatya", "to": "karta" },
+            { "from": "karta", "to": "guards" },
+            { "from": "guards", "to": "gate" },
+            { "from": "gate", "to": "amatya", "label": "replan ≤ 2", "kind": "reject" },
+            { "from": "gate", "to": "terminal" }
+          ]
+        },
+        "highlights": [
+          { "title": "Evidence before architecture", "body": "Pattern validated against Anthropic's orchestrator-worker results (+90.2% over single-agent on research evals), LangGraph's supervisor library, and Cognition's pivot to coordinator-over-Devins — then deliberately constrained to 1+1 agents to dodge the 15× token trap." },
+          { "title": "A go/no-go gate, not a roadmap", "body": "Phase 0 is one week: hand-rolled ~300-line state machine, 3 tools, golden-task eval. If 4/5 tasks don't pass under the token budget, the platform doesn't get built. The loop is proven before a single dashboard exists." },
+          { "title": "Security-first runtime", "body": "Prompt-injection sanitizer on every tool output before it re-enters context, AES-256-GCM encrypted token store with per-tenant KDF, Postgres RLS with tenant_id on every table from day one." },
+          { "title": "Cost is a first-class signal", "body": "OpenTelemetry traces carry cost_usd and token counts on every LLM call, rolled up task → worker → tenant, with hard per-tenant spend caps enforced in the job processor." }
+        ],
+        "metrics": [
+          { "value": "5", "label": "independent bounds per run" },
+          { "value": "1+1", "label": "supervisor + worker, by design" },
+          { "value": "4/5", "label": "golden tasks to pass Phase 0" },
+          { "value": "0", "label": "code paths that can hang" }
+        ],
+        "stack": ["Python 3.13", "FastAPI", "LiteLLM / OpenRouter", "Redis", "PostgreSQL + pgvector", "Postgres RLS", "AES-256-GCM", "OpenTelemetry", "Docker", "Stripe Metering"],
+        "architecture": {
+          "doctrine": {
+            "kicker": "THE DOCTRINE",
+            "heading": "Five Bounds — why Yantresh can never hang",
+            "intro": "Every run is bounded on five independent axes. Every counter is monotonic and capped, and the only thing past a cap is a clean escalated or failed state with a checkpoint.",
+            "bounds": [
+              { "n": "01", "name": "Step budget", "limit": "25 tool-calls / task", "breach": "forced supervisor review → escalate" },
+              { "n": "02", "name": "Token budget", "limit": "e.g. 200K / task, all calls", "breach": "soft warn at 80% · hard stop at 100%" },
+              { "n": "03", "name": "Wall-clock budget", "limit": "10 min", "breach": "cancel in-flight · checkpoint · escalate" },
+              { "n": "04", "name": "Retry ceiling", "limit": "2 per subtask", "breach": "mark blocked · move on or escalate" },
+              { "n": "05", "name": "Replan ceiling", "limit": "2 per task", "breach": "escalate to human — never a 3rd replan" }
+            ],
+            "guards": [
+              { "name": "Loop Guard", "body": "Fingerprints every (tool, params, output) call; embedding cosine similarity > 0.92 in a sliding window flags the loop and burns a replan." },
+              { "name": "Circuit Breaker", "body": "Per tool/connector: opens after 3 consecutive failures, half-opens on timeout, fails fast while open — never hammers a dead endpoint." },
+              { "name": "Verification Gate", "body": "The Amatya checks worker output against an explicit definition-of-done before complete. A Karta can never self-certify." }
+            ],
+            "guarantee": "steps↑ tokens↑ time↑ retries↑ replans↑ — every counter capped, every cap terminal. \"Stuck\" is unreachable."
+          },
+          "router": {
+            "kicker": "MODEL-AGNOSTIC BY CONSTRUCTION",
+            "heading": "One seam for every model",
+            "intro": "Agent logic never calls a provider SDK. All inference crosses a single ModelRouter seam into a gateway — swapping a frontier model for DeepSeek or a local vLLM is a config edit, zero code change.",
+            "diagram": {
+              "cols": 4,
+              "caption": "ModelRouter fan-out — model per step type, budgets and fallback chains enforced at the seam.",
+              "nodes": [
+                { "id": "logic", "title": "Agent Logic", "sub": "never imports a provider SDK", "kind": "compute", "col": 1, "row": 2 },
+                { "id": "router", "title": "ModelRouter", "sub": "model per step type · budget caps · fallback chains", "kind": "guard", "col": 2, "row": 2 },
+                { "id": "gateway", "title": "LiteLLM / OpenRouter", "sub": "one OpenAI-format endpoint · cost logging", "kind": "infra", "col": 3, "row": 2 },
+                { "id": "frontier", "title": "Frontier Reasoning", "sub": "Anthropic · OpenAI — planning & review", "kind": "ml", "col": 4, "row": 1 },
+                { "id": "fast", "title": "Cheap Fast Models", "sub": "Google · DeepSeek · Mistral — execution", "kind": "ml", "col": 4, "row": 2 },
+                { "id": "local", "title": "Local vLLM", "sub": "self-hosted · embeddings & overflow", "kind": "ml", "col": 4, "row": 3 }
+              ],
+              "edges": [
+                { "from": "logic", "to": "router" },
+                { "from": "router", "to": "gateway" },
+                { "from": "gateway", "to": "frontier" },
+                { "from": "gateway", "to": "fast" },
+                { "from": "gateway", "to": "local" }
+              ]
+            },
+            "routes": [
+              { "step": "Supervisor planning / review", "model": "strong reasoning class", "why": "quality-sensitive, low frequency" },
+              { "step": "Worker tool-calling / execution", "model": "cheap fast class", "why": "high frequency, repetitive" },
+              { "step": "Embeddings (loop guard, memory)", "model": "shared API endpoint", "why": "never a local model per worker" }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "experience": {
+    "id": "experience",
+    "kicker": "THE TIMELINE",
+    "heading": "Experience, threaded",
+    "items": [
+      {
+        "role": "Full-Stack Developer",
+        "company": "Patel Solutions Corp. / Independent Consulting",
+        "period": "Mar 2024 — Present",
+        "location": "Ontario, Canada · Remote",
+        "projectId": "synapse",
+        "bullets": [
+          "Built and deployed end-to-end web applications and MVPs for North American SMB clients in e-commerce, retail, and restaurant sectors — TypeScript, React, Node.js, Python — owning scoping through launch.",
+          "Integrated Stripe, delivery/ordering platforms, booking systems, OAuth 2.0 social auth, Google Maps, and inventory feeds with graceful error handling.",
+          "Architected AI automation workflows on OpenAI + Claude APIs with strict JSON Schema validation protecting all downstream systems.",
+          "Designed n8n / Make.com ETL pipelines syncing real-time supplier data and order dispatch — zero manual intervention in daily operations."
+        ]
+      },
+      {
+        "role": "Software Engineer, AI Training (Freelance)",
+        "company": "Alignerr · Outlier AI · Handshake AI · Mindrift",
+        "period": "Mar 2024 — Present",
+        "location": "Remote",
+        "bullets": [
+          "Evaluated and refined AI-generated code across four frontier AI platforms, feeding structured feedback into RLHF pipelines and reward model training.",
+          "Authored PRDs used as ground-truth training data: auth flows, data models, REST API design, edge-case error handling.",
+          "Documented hallucination patterns in query optimization and index usage, contributing to multiple model update cycles. Passed Alignerr vetting (~3% acceptance rate)."
+        ]
+      },
+      {
+        "role": "Software Engineer",
+        "company": "One Red Maple",
+        "period": "May 2021 — Feb 2024",
+        "location": "North Bay, Ontario, Canada",
+        "projectId": "nexus",
+        "bullets": [
+          "Designed and built a distributed scraping system aggregating product listings from 300+ e-commerce stores, powering a price-comparison product across web, mobile, and browser extension.",
+          "Automated the pipeline on Azure (Service Bus, Functions) with GitHub Actions CI/CD and per-platform rotating proxy infrastructure.",
+          "Trained a product + image matching ML model resolving identical products across 90%+ string difference.",
+          "Engineered normalization, deduplication, and indexing of 5,000+ daily records — sub-100ms search over 1M+ tracked products.",
+          "Launched Flutter iOS/Android apps: 30,000+ downloads, 4.3★ App Store rating; GA4 funnel work lifted conversions 11%."
+        ]
+      },
+      {
+        "role": "Data Engineer (Part-Time)",
+        "company": "Manish Advertising",
+        "period": "Aug 2018 — Jul 2019",
+        "location": "India",
+        "bullets": [
+          "Designed data workflows extracting insights from 10GB+ datasets; deployed Kafka Connect in standalone and distributed modes for real-time streaming.",
+          "Optimized reporting with complex SQL Server queries and stored procedures; containerized deployments with Docker on AWS."
+        ]
+      }
+    ],
+    "education": [
+      { "credential": "Automation Engineer Technology (Diploma)", "school": "Beta College of Business and Technology, Mississauga, ON", "period": "2022 — 2023" },
+      { "credential": "Computer Programmer Analyst (Advanced Diploma)", "school": "Canadore College, North Bay, ON", "period": "2019 — 2022" },
+      { "credential": "Computer Engineering (Diploma)", "school": "Government Polytechnic Gandhinagar, India", "period": "2016 — 2019" }
+    ],
+    "certifications": [
+      { "name": "n8n Certified Professional", "issuer": "n8n.io", "note": "credential available on request" }
+    ]
+  },
+  "contact": {
+    "id": "contact",
+    "kicker": "OPEN A CHANNEL",
+    "heading": "Every system needs an orchestrator.",
+    "body": "If you're scaling data infrastructure, wiring LLMs into operations that can't afford to break, or building agent systems that must terminate — let's trace the thread together.",
+    "email": "yash.patel.exclusive@gmail.com",
+    "channels": [
+      { "label": "Email", "value": "yash.patel.exclusive@gmail.com", "href": "mailto:yash.patel.exclusive@gmail.com" },
+      { "label": "LinkedIn", "value": "linkedin.com/in/patel03", "href": "https://www.linkedin.com/in/patel03" },
+      { "label": "Location", "value": "Kitchener, ON, Canada — remote-first" }
+    ]
+  },
+  "footer": {
+    "note": "Designed as an orchestration canvas — every section a node, every skill a thread.",
+    "stack": "Astro · Tailwind CSS · vanilla TS · nginx on Oracle ARM (Ampere A1)",
+    "copyright": "© 2026 Yash Patel. All threads held."
+  }
+}
