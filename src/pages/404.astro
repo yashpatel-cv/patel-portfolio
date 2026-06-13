@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base>
+  <NavBar />
+  <main id="main">
+    <section class="section">
+      <div class="wrap">
+        <p class="kicker">404</p>
+        <h1 class="h2">Page not found</h1>
+        <p class="lede">
+          That node doesn't exist in this graph. <a href="/">Return to the home page</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Base>
