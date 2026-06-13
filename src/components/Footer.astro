@@ -1,0 +1,13 @@
+---
+import { content } from '../lib/content';
+
+const { footer } = content;
+---
+
+<footer class="footer">
+  <div class="wrap flex flex-col items-center gap-2.5 text-center md:flex-row md:justify-between md:text-left">
+    <p>{footer.note}</p>
+    <p class="text-azure-dim">{footer.stack}</p>
+    <p>{footer.copyright}</p>
+  </div>
+</footer>

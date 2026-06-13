@@ -1,0 +1,37 @@
+---
+import { content } from '../lib/content';
+
+const { contact } = content;
+---
+
+<section id={contact.id} class="section !pb-20">
+  <div class="wrap">
+    <div class="node-card text-center" data-reveal>
+      <p class="kicker">{contact.kicker}</p>
+      <h2 class="h2">{contact.heading}</h2>
+      <p class="lede mx-auto">{contact.body}</p>
+
+      <div class="mt-10">
+        <a class="btn btn-primary" href={`mailto:${contact.email}`}>{contact.email}</a>
+      </div>
+
+      <div class="mt-9 flex flex-wrap justify-center gap-3">
+        {contact.channels.map((channel) =>
+          channel.href ? (
+            <a
+              class="chip"
+              href={channel.href}
+              {...(channel.href.startsWith('http')
+                ? { target: '_blank', rel: 'noopener noreferrer' }
+                : {})}
+            >
+              {channel.label} · {channel.value}
+            </a>
+          ) : (
+            <span class="chip">{channel.label} · {channel.value}</span>
+          ),
+        )}
+      </div>
+    </div>
+  </div>
+</section>
