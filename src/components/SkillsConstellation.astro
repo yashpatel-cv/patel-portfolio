@@ -1,0 +1,95 @@
+---
+/**
+ * SkillsConstellation — skill clusters arranged as nodes around the
+ * orchestrator core. Threads (SVG) tie the core to every cluster; chips
+ * tagged with `links` highlight & scroll to the case studies they feed.
+ */
+import { content } from '../lib/content';
+
+const { skills } = content;
+const rowOne = skills.clusters.filter((cluster) => cluster.position.row === 1);
+const rowThree = skills.clusters.filter((cluster) => cluster.position.row !== 1);
+---
+
+<section id={skills.id} class="section">
+  <div class="wrap">
+    <div data-reveal>
+      <p class="kicker">{skills.kicker}</p>
+      <h2 class="h2">{skills.heading}</h2>
+      <p class="lede">{skills.intro}</p>
+    </div>
+
+    <div class="flow mt-16" data-canvas="constellation" data-edges={JSON.stringify(skills.edges)}>
+      <svg class="flow-threads" aria-hidden="true"></svg>
+      <div class="flow-grid !gap-y-12" style="--cols:3">
+        {rowOne.map((cluster, index) => (
+          <div
+            class="cluster-card"
+            data-node={cluster.id}
+            data-reveal
+            style={`--col:${cluster.position.col};--row:${cluster.position.row};--reveal-delay:${index * 90}ms`}
+          >
+            <h3 class="cluster-title">{cluster.title}</h3>
+            <div class="flex flex-wrap gap-2">
+              {cluster.items.map((item) =>
+                item.links ? (
+                  <button
+                    type="button"
+                    class="chip"
+                    data-links={item.links.join(',')}
+                    title={`Threads into: ${item.links.join(', ')}`}
+                  >
+                    {item.name}
+                  </button>
+                ) : (
+                  <span class="chip">{item.name}</span>
+                ),
+              )}
+            </div>
+          </div>
+        ))}
+
+        <div
+          class="core-node self-center justify-self-center"
+          data-node={skills.core.id}
+          style="--col:2;--row:2"
+        >
+          <p class="font-mono text-xs font-semibold tracking-[0.28em] text-emerald">
+            {skills.core.title.toUpperCase()}
+          </p>
+          <p class="mt-1.5 font-mono text-[0.66rem] leading-relaxed text-ink-faint">{skills.core.sub}</p>
+        </div>
+
+        {rowThree.map((cluster, index) => (
+          <div
+            class="cluster-card"
+            data-node={cluster.id}
+            data-reveal
+            style={`--col:${cluster.position.col};--row:${cluster.position.row};--reveal-delay:${index * 90}ms`}
+          >
+            <h3 class="cluster-title">{cluster.title}</h3>
+            <div class="flex flex-wrap gap-2">
+              {cluster.items.map((item) =>
+                item.links ? (
+                  <button
+                    type="button"
+                    class="chip"
+                    data-links={item.links.join(',')}
+                    title={`Threads into: ${item.links.join(', ')}`}
+                  >
+                    {item.name}
+                  </button>
+                ) : (
+                  <span class="chip">{item.name}</span>
+                ),
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+      <figcaption class="flow-caption">
+        hover a glowing thread to light up the case study it feeds — click to jump there
+      </figcaption>
+    </div>
+  </div>
+</section>
