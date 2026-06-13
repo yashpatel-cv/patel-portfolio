@@ -1,0 +1,17 @@
+---
+import { content } from '../lib/content';
+
+const { metrics } = content;
+---
+
+<section aria-label={metrics.ariaLabel} class="relative pb-8">
+  <div class="wrap grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
+    {metrics.items.map((metric, index) => (
+      <div class="metric" data-reveal style={`--reveal-delay:${index * 70}ms`}>
+        <p class="value">{metric.value}</p>
+        <p class="label">{metric.label}</p>
+        {metric.detail && <p class="detail">{metric.detail}</p>}
+      </div>
+    ))}
+  </div>
+</section>
