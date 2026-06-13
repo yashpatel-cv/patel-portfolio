@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+import NavBar from '../components/NavBar.astro';
+import Hero from '../components/Hero.astro';
+import Metrics from '../components/Metrics.astro';
+import SkillsConstellation from '../components/SkillsConstellation.astro';
+import ProjectNode from '../components/ProjectNode.astro';
+import ExperienceThread from '../components/ExperienceThread.astro';
+import ContactSection from '../components/ContactSection.astro';
+import Footer from '../components/Footer.astro';
+import { content } from '../lib/content';
+
+const { projects } = content;
+---
+
+<Base>
+  <NavBar />
+  <main id="main">
+    <Hero />
+    <Metrics />
+    <SkillsConstellation />
+
+    <section id={projects.id} class="section">
+      <div class="wrap">
+        <div data-reveal>
+          <p class="kicker">{projects.kicker}</p>
+          <h2 class="h2">{projects.heading}</h2>
+          <p class="lede">{projects.intro}</p>
+        </div>
+
+        <div class="mt-16 grid gap-14">
+          {projects.items.map((project, index) => (
+            <ProjectNode project={project} index={index} />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <ExperienceThread />
+    <ContactSection />
+  </main>
+  <Footer />
+</Base>
