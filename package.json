@@ -1,0 +1,30 @@
+{
+  "name": "yash-patel-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Yantresh — orchestration-canvas portfolio for Yash Patel. Static, data-driven, ARM64-ready.",
+  "engines": {
+    "node": ">=20.3.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "check": "astro check",
+    "prebuild": "node scripts/generate-og.mjs",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@fontsource-variable/space-grotesk": "^5.2.5",
+    "@fontsource/jetbrains-mono": "^5.2.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/sitemap": "^3.3.0",
+    "@tailwindcss/vite": "^4.1.4",
+    "astro": "^5.7.4",
+    "sharp": "^0.34.1",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3"
+  }
+}
