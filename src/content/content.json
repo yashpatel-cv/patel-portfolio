@@ -1,16 +1,16 @@
 {
   "meta": {
     "title": "Yash Patel — Full-Stack Developer · AI Orchestration & Automation",
-    "description": "Full-Stack Developer and n8n Certified Professional. I architect distributed data engines, autonomous AI operations pipelines, and bounded multi-agent systems. 1M+ products tracked, 300+ stores scraped, sub-100ms search at scale.",
-    "themeColor": "#0a0e14",
+    "description": "Full-Stack Developer specializing in AI agents and automation. I architect distributed data engines, autonomous AI operations pipelines, and bounded multi-agent systems. 1M+ products tracked, 300+ stores scraped, sub-100ms search at scale.",
+    "themeColor": "#f7f9fc",
     "language": "en",
     "author": "Yash Patel",
-    "keywords": ["Full-Stack Developer", "AI Orchestration", "AI Agents", "Multi-Agent Systems", "LangGraph", "Google Agent Development Kit", "Hugging Face Agents", "n8n Certified Professional", "Automation Engineer", "Distributed Systems", "LLM Pipelines", "TypeScript", "Python"]
+    "keywords": ["Full-Stack Developer", "AI Orchestration", "AI Agents", "Multi-Agent Systems", "LangGraph", "Google Agent Development Kit", "Hugging Face Agents", "Automation Engineer", "Distributed Systems", "LLM Pipelines", "TypeScript", "Python"]
   },
   "brand": {
     "mark": "YP",
-    "wordmark": "yash.patel",
-    "tagline": "yantresh — the holder of threads"
+    "wordmark": "Yantresh",
+    "tagline": "the holder of threads"
   },
   "nav": {
     "ariaLabel": "Primary navigation",
@@ -25,7 +25,7 @@
   },
   "hero": {
     "status": "Available for AI infrastructure & automation engineering",
-    "kicker": "n8n CERTIFIED PROFESSIONAL · 4+ YEARS SHIPPING TO PRODUCTION",
+    "kicker": "AI AGENTS & AUTOMATION ENGINEER · 4+ YEARS SHIPPING TO PRODUCTION",
     "name": "Yash Patel",
     "role": "Full-Stack Developer · AI Orchestration Engineer",
     "headline": {
@@ -43,7 +43,7 @@
       "title": "amatya@yantresh:~",
       "lines": [
         { "cmd": "whoami", "out": "yash.patel — full-stack dev · ai orchestration · data at scale" },
-        { "cmd": "n8n certs --verify", "out": "✓ n8n Certified Professional" },
+        { "cmd": "certs --list", "out": "✓ Hugging Face AI Agents · Google ADK · LangGraph Deep Agents" },
         { "cmd": "uptime --career", "out": "4+ yrs · 1M+ products tracked · 300+ stores · 30K+ app installs" },
         { "cmd": "./yantresh --status", "out": "ACTIVE DEV → AI Workforce OS · Phase 0: prove the loop" }
       ]
@@ -145,7 +145,7 @@
         "title": "AI & Automation",
         "position": { "col": 3, "row": 3 },
         "items": [
-          { "name": "n8n (Certified)", "links": ["synapse"] },
+          { "name": "n8n", "links": ["synapse"] },
           { "name": "Anthropic Claude API", "links": ["synapse", "yantresh"] },
           { "name": "OpenAI API", "links": ["synapse", "yantresh"] },
           { "name": "LangChain / LangGraph" },
@@ -419,10 +419,10 @@
       { "credential": "Computer Engineering (Diploma)", "school": "Government Polytechnic Gandhinagar, India", "period": "2016 — 2019" }
     ],
     "certifications": [
-      { "name": "n8n Certified Professional", "issuer": "n8n.io", "note": "credential available on request" },
       { "name": "AI Agents Course — Certificate of Fundamentals of Agents", "issuer": "Hugging Face", "note": "credential available on request" },
       { "name": "Build Agents with Agent Development Kit (ADK)", "issuer": "Google Cloud Skills Boost", "note": "credential available on request" },
-      { "name": "Deep Agents with LangGraph", "issuer": "LangChain Academy", "note": "credential available on request" }
+      { "name": "Deep Agents with LangGraph", "issuer": "LangChain Academy", "note": "credential available on request" },
+      { "name": "n8n Certified Professional", "issuer": "n8n.io", "note": "credential available on request" }
     ]
   },
   "contact": {
