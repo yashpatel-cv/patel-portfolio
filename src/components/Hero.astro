@@ -13,11 +13,13 @@ const { hero } = content;
     <div>
       <span class="status-pill status-live">{hero.status}</span>
       <p class="kicker mt-7">{hero.kicker}</p>
-      <h1 class="hero-h1">
+      <h1 class="hero-name">{hero.name}</h1>
+      <p class="hero-role">{hero.role}</p>
+      <p class="hero-tagline">
         {hero.headline.lead}
         <span class="em">{hero.headline.emphasis}</span>
         {hero.headline.trail}
-      </h1>
+      </p>
       <p class="lede">{hero.subhead}</p>
 
       <div class="mt-9 flex flex-wrap gap-3.5">

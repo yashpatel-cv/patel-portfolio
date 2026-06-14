@@ -5,7 +5,7 @@
     "themeColor": "#0a0e14",
     "language": "en",
     "author": "Yash Patel",
-    "keywords": ["Full-Stack Developer", "AI Orchestration", "n8n Certified Professional", "Automation Engineer", "Distributed Systems", "LLM Pipelines", "TypeScript", "Python"]
+    "keywords": ["Full-Stack Developer", "AI Orchestration", "AI Agents", "Multi-Agent Systems", "LangGraph", "Google Agent Development Kit", "Hugging Face Agents", "n8n Certified Professional", "Automation Engineer", "Distributed Systems", "LLM Pipelines", "TypeScript", "Python"]
   },
   "brand": {
     "mark": "YP",
@@ -25,7 +25,9 @@
   },
   "hero": {
     "status": "Available for AI infrastructure & automation engineering",
-    "kicker": "FULL-STACK DEVELOPER · n8n CERTIFIED PROFESSIONAL",
+    "kicker": "n8n CERTIFIED PROFESSIONAL · 4+ YEARS SHIPPING TO PRODUCTION",
+    "name": "Yash Patel",
+    "role": "Full-Stack Developer · AI Orchestration Engineer",
     "headline": {
       "lead": "I hold the",
       "emphasis": "threads",
@@ -146,7 +148,11 @@
           { "name": "n8n (Certified)", "links": ["synapse"] },
           { "name": "Anthropic Claude API", "links": ["synapse", "yantresh"] },
           { "name": "OpenAI API", "links": ["synapse", "yantresh"] },
-          { "name": "LangChain" },
+          { "name": "LangChain / LangGraph" },
+          { "name": "Deep Agents", "links": ["yantresh"] },
+          { "name": "Google Agent Development Kit (ADK)", "links": ["yantresh"] },
+          { "name": "Hugging Face Agents", "links": ["yantresh"] },
+          { "name": "Multi-Agent Orchestration", "links": ["yantresh"] },
           { "name": "JSON Schema Validation", "links": ["synapse"] },
           { "name": "Prompt Engineering", "links": ["yantresh"] },
           { "name": "Apify / Selenium / BeautifulSoup", "links": ["nexus"] },
@@ -413,7 +419,10 @@
       { "credential": "Computer Engineering (Diploma)", "school": "Government Polytechnic Gandhinagar, India", "period": "2016 — 2019" }
     ],
     "certifications": [
-      { "name": "n8n Certified Professional", "issuer": "n8n.io", "note": "credential available on request" }
+      { "name": "n8n Certified Professional", "issuer": "n8n.io", "note": "credential available on request" },
+      { "name": "AI Agents Course — Certificate of Fundamentals of Agents", "issuer": "Hugging Face", "note": "credential available on request" },
+      { "name": "Build Agents with Agent Development Kit (ADK)", "issuer": "Google Cloud Skills Boost", "note": "credential available on request" },
+      { "name": "Deep Agents with LangGraph", "issuer": "LangChain Academy", "note": "credential available on request" }
     ]
   },
   "contact": {

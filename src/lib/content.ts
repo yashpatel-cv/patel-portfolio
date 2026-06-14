@@ -74,6 +74,8 @@ export interface TerminalLine {
 export interface Hero {
   status: string;
   kicker: string;
+  name: string;
+  role: string;
   headline: { lead: string; emphasis: string; trail: string };
   subhead: string;
   location: string;
@@ -243,6 +245,8 @@ function validateDiagram(diagram: Diagram, path: string): void {
 function validate(data: SiteContent): SiteContent {
   assertNonEmpty(data.meta?.title, 'meta.title');
   assertNonEmpty(data.meta?.description, 'meta.description');
+  assertNonEmpty(data.hero?.name, 'hero.name');
+  assertNonEmpty(data.hero?.role, 'hero.role');
   assertNonEmpty(data.hero?.headline?.emphasis, 'hero.headline.emphasis');
   assertNonEmpty(data.metrics?.items, 'metrics.items');
   assertNonEmpty(data.skills?.clusters, 'skills.clusters');

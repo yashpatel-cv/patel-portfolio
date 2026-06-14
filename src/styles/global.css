@@ -445,14 +445,34 @@
     background: rgb(76 195 255 / 0.09);
   }
 
-  .hero-h1 {
-    margin-top: 1.4rem;
-    font-size: clamp(2.6rem, 7vw, 5rem);
+  /* Name is the focal point — big, solid, instantly legible to any reader. */
+  .hero-name {
+    margin-top: 1.3rem;
+    font-size: clamp(2.9rem, 7.6vw, 5.4rem);
     font-weight: 700;
-    line-height: 1.04;
-    letter-spacing: -0.03em;
+    line-height: 1;
+    letter-spacing: -0.035em;
+    color: var(--color-ink);
   }
-  .hero-h1 .em {
+  /* Plain-language role line — what a recruiter needs in one glance. */
+  .hero-role {
+    margin-top: 0.85rem;
+    font-size: clamp(1.15rem, 2.5vw, 1.65rem);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--color-ink-dim);
+  }
+  /* Brand tagline — keeps the "threads" identity, secondary to the name. */
+  .hero-tagline {
+    margin-top: 1.2rem;
+    max-width: 34rem;
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    font-weight: 500;
+    line-height: 1.45;
+    letter-spacing: -0.01em;
+    color: var(--color-ink);
+  }
+  .hero-tagline .em {
     background: linear-gradient(95deg, var(--color-emerald), var(--color-azure));
     -webkit-background-clip: text;
     background-clip: text;
@@ -460,7 +480,7 @@
     position: relative;
     white-space: nowrap;
   }
-  .hero-h1 .em::after {
+  .hero-tagline .em::after {
     content: '';
     position: absolute;
     left: 2%;
