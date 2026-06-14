@@ -76,9 +76,9 @@ docker compose up -d --build
 **Production** — `.github/workflows/build-push.yml` builds multi-arch
 images and pushes to `ghcr.io/<owner>/patel-portfolio` on every push to
 `main`. The `yantresh-hub` repo pulls that image, fronts it with Caddy
-(TLS via `ACME_EMAIL`), and routes `{$DOMAIN}` to it — see
-`yantresh-hub/DEPLOY.md`. This repo's `docker-compose.yml` is not used in
-that path.
+(TLS via `ACME_EMAIL`), and routes `{$PORTFOLIO_ADDRESS}` to it (the bare
+apex `{$DOMAIN}` 301-redirects here) — see `yantresh-hub/DEPLOY.md`. This
+repo's `docker-compose.yml` is not used in that path.
 
 The runtime container is hardened: non-root (UID 101), read-only filesystem with a 16 MB
 tmpfs, `cap_drop: ALL`, `no-new-privileges`, CSP/security headers, gzip, immutable caching
