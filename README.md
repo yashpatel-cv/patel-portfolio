@@ -1,5 +1,9 @@
 # yash.patel — the holder of threads
 
+> **AI agents:** read [`CLAUDE.md`](CLAUDE.md) before making any edit. It is
+> the mandatory rules file (minimalism, no hardcoded secrets, atomic commits,
+> LF endings, premium non-AI design) and applies to every change.
+
 Premium dark-mode portfolio for **Yash Patel** (Full-Stack Developer · n8n Certified Professional),
 designed as a **Yantresh orchestration canvas**: every section is a node, every skill a thread.
 SVG connection lines light up on scroll, tracing data flows from core skills into three
