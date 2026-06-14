@@ -54,6 +54,17 @@ These are the tells that make a site feel machine-made. Audit each:
   tabular-nums for metrics, optical alignment of the thread endpoints.
 - **Favicon / OG image** that matches the canvas motif (not a default).
 
+## Progress
+
+- **2026-06-14** — Started: added shared `--ease-out` motion token
+  (`global.css` `@theme`) and applied it to the metric hover; added
+  `tabular-nums` to metric figures. Selection + focus-visible were already
+  on-brand (emerald) — left as-is.
+- **Remaining items need a dev server + human eyes** (`npm run dev`). Layout
+  asymmetry, micro-interactions, type scale, and reveal choreography are
+  visual judgement calls — do them iteratively while watching the render,
+  not blind.
+
 ## Guardrails
 
 - All motion must honor `prefers-reduced-motion` (already the baseline).

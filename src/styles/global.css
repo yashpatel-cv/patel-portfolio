@@ -25,6 +25,11 @@
 
   --font-sans: 'Space Grotesk Variable', 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Shared motion curve — a gentle, designed ease-out. Already used by the
+     scroll reveals; use var(--ease-out) for new interactive transitions
+     instead of the generic `ease` keyword, for one consistent feel. */
+  --ease-out: cubic-bezier(0.22, 0.8, 0.3, 1);
 }
 
 /* ------------------------------------------------------------------
@@ -550,7 +555,7 @@
     border-radius: 0.8rem;
     background: rgb(13 19 29 / 0.6);
     padding: 1.1rem 1.2rem;
-    transition: border-color 0.2s ease, transform 0.2s ease;
+    transition: border-color 0.2s var(--ease-out), transform 0.2s var(--ease-out);
   }
   .metric:hover {
     border-color: var(--color-line-bright);
@@ -560,6 +565,8 @@
     font-family: var(--font-mono);
     font-size: 1.6rem;
     font-weight: 600;
+    /* Tabular figures so metrics align cleanly column-to-column. */
+    font-variant-numeric: tabular-nums;
     background: linear-gradient(95deg, var(--color-emerald), var(--color-azure));
     -webkit-background-clip: text;
     background-clip: text;
