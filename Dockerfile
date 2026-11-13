@@ -7,7 +7,7 @@
 #
 #   Stage 1 (deps)  : node:22-alpine  — deterministic npm ci
 #   Stage 2 (build) : node:22-alpine  — astro static build
-#   Stage 3 (run)   : nginxinc/nginx-unprivileged:1.27-alpine
+#   Stage 3 (run)   : nginxinc/nginx-unprivileged:1.29-alpine
 #                     — non-root, listens on 8080 by design
 # ============================================================
 
@@ -34,7 +34,12 @@ RUN npm run check && npm run build
 # ---------- Stage 3: runtime ----------
 # Unprivileged nginx: runs as UID 101, pid/cache under /tmp,
 # binds the non-privileged port 8080 — no root anywhere.
-FROM nginxinc/nginx-unprivileged:1.27-alpine AS runtime
+FROM nginxinc/nginx-unprivileged:1.29-alpine AS runtime
+
+# Base image lags Alpine security fixes; patch at build so the CI CVE gate passes.
+USER root
+RUN apk upgrade --no-cache
+USER 101
 
 COPY deploy/nginx.conf /etc/nginx/conf.d/default.conf
 COPY deploy/security-headers.inc /etc/nginx/conf.d/security-headers.inc

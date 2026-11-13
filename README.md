@@ -17,7 +17,7 @@ production-grade case studies — including the **Yantresh — AI Workforce OS**
 | Framework | Astro 5 (static output)                           | zero-JS-by-default HTML, components, build-time validation     |
 | Styling   | Tailwind CSS 4 (`@tailwindcss/vite`)              | token-driven theme (`@theme`), no runtime CSS                  |
 | Runtime   | `threads.ts` — dependency-free vanilla TS         | SVG thread renderer, particle field, terminal, scrollspy       |
-| Serving   | `nginxinc/nginx-unprivileged:1.27-alpine`         | non-root, port 8080, multi-arch (arm64/amd64)                  |
+| Serving   | `nginxinc/nginx-unprivileged:1.29-alpine`         | non-root, port 8080, multi-arch (arm64/amd64)                  |
 
 ## Architecture: strict data separation
 
