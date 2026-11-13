@@ -12,7 +12,7 @@
 # ============================================================
 
 # ---------- Stage 1: dependencies ----------
-FROM node:22-alpine AS deps
+FROM --platform=$BUILDPLATFORM node:22-alpine AS deps
 WORKDIR /app
 
 # Layer-cache dependencies independently of source changes.
@@ -20,7 +20,7 @@ COPY package.json package-lock.json ./
 RUN npm ci --no-audit --no-fund
 
 # ---------- Stage 2: build ----------
-FROM node:22-alpine AS build
+FROM --platform=$BUILDPLATFORM node:22-alpine AS build
 WORKDIR /app
 ENV NODE_ENV=production \
     ASTRO_TELEMETRY_DISABLED=1
